@@ -1,0 +1,20 @@
+using namespace std;
+class vowelcount{
+	int count = 0;
+	public:
+	void counting(char *sptr){
+		while((*sptr) != '\0'){
+			if(*sptr == 'a'||*sptr == 'e' || *sptr == 'i'||*sptr=='o'||*sptr=='u'||*sptr == 'A'||*sptr == 'E' || *sptr == 'I'||*sptr=='O'||*sptr=='U'){
+				count++;
+			}
+			sptr++;
+		}
+		cout<<"NO OF VOWELS : "<<count;
+	}
+};
+int main(){
+	vowelcount v;
+	char str[]="samanvitha";
+	v.counting(str);
+	return 0;
+}
