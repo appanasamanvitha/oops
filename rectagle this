@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class rect{
+	float l,b;
+	public:
+	void getlb(float l,float b){
+		this->l = l;
+		this->b=b;
+	}
+	void area(){
+		float area;
+		area = l*b;
+		cout<<"LENGTH : "<<l<<"BREADTH: "<<b<<"AREA: "<<area;
+	}
+};
+int main(){
+	rect r;
+	r.getlb(10,20);
+	r.area();
+	return 0;
+}
