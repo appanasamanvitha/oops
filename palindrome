@@ -1,0 +1,19 @@
+using namespace std;
+int main(){
+	int num,temp,rem;
+	int rev = 0;
+	cout<<"ENter number : ";
+	cin>>num;
+	temp = num;
+	while(temp != 0){
+		rem = temp % 10;
+		rev = rev *10 + rem;
+		temp = temp /10;
+	}
+	if(rev == num){
+		cout<<"\nPALINDROME";
+	}else{
+		cout<<"\nNOT A PALINDROME";
+	}
+	return 0;
+}
