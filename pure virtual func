@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class A {
+   public:
+        int a1,a2;
+        void read(){
+                cout<<"enter a1,a2: ";
+                cin>>a1>>a2;
+        }
+        virtual void s() = 0;
+};
+
+class rect:public A {
+   public:
+      void s() {
+       //  cout << "Virtual Function in Derived class {d}\n";
+       int l1;
+       l1 = a1*a2;
+       cout<<"rect : "<<l1;
+      }
+};
+class tri:public A{
+        public:
+        void s(){
+                int l2;
+                l2 = 0.5*a1*a2;
+                cout<<"tri: "<<l2;
+        }
+};
+
+int main() {
+   A *a;
+   rect r;
+   a = &r;
+   a -> read();
+   a->s();
+   tri t;
+   a = &t;
+   a -> read();
+   a->s();
+   return 0;
+}
