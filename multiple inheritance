@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+class student{
+	public:
+		string name;
+		int rno;
+		void read(){
+			cout<<"ENTER STUDENT DETAILS : "<<endl;
+			cout<<"enter name: ";
+			cin>>name;
+			cout<<"enter rno : ";
+			cin>>rno;
+		}
+};
+class marks{
+	public:
+		int m1,m2,m3;
+		void readm(){
+			cout<<"enter student marks : "<<endl;
+			cout<<"enter marks m1:  ";
+			cin>>m1;
+			cout<<"enter marks m2:  ";
+                        cin>>m2;
+			cout<<"enter marks m3:  ";
+                        cin>>m3;
+		}
+};
+class sm{
+	public:
+		int sports;
+		void reads(){
+			cout<<"Enter sports marks : ";
+			cin>>sports;
+		}
+};
+class total:public student,public marks,public sm{
+	public:
+		int av;
+		void avg(){
+			av = (m1+m2+m3)/3;
+		}
+		void print(){
+			cout<<"STUDENT DETAILS ARE : "<<endl;
+			cout<<"Student name : "<<name<<"\nROLL NO : "<<rno<<"\nM1 : "<<m1<<"\nM2: "<<m2<<"\nM3: "<<m3<<"\navg : "<<av<<"\nsprts marks : "<<sports;
+		}
+};
+int main(){
+	total t;
+	t.read();
+	t.readm();
+	t.reads();
+	t.avg();
+	t.print();
+	return 0;
+}
+
+
