@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class A{
+        public:
+                void fun(char x){
+                        cout<<"charcter type : "<<x<<endl;
+                }
+                void fun(int x){
+                        cout<<"integer type : "<<x<<endl;
+                }
+                void fun(double x){
+                        cout<<"floating type : "<<x<<endl;
+                }
+                void fun(string x){
+                        cout<<"string type : "<<x<<endl;
+                }
+};
+int main(){
+        A a;
+        a.fun(10);
+        a.fun('a');
+        a.fun("sam");
+        a.fun(7.7);
+        return 0;
+}
+~           
