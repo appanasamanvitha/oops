@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class sum{
+        public:
+                int add(int x,int y){
+                        return x+y;
+                }
+                int add(int x,int y,int z){
+                        return x+y+z;
+                }
+                string add(string a,string b){
+                        return a+b;
+                }
+                double add(double a,double b){
+                        return a + b;
+                }
+};
+int main(){
+        sum s;
+        cout<<"sum using 2 parameters : "<<s.add(5,10);
+        cout<<"\nsum using 3 parameters : "<<s.add(5,10,4);
+        cout<<"\nsum using 2 string parameters : "<<s.add(1.1,2.2);
+        cout<<"\nsum using 2 double parameters : "<<s.add("sam","appana")<<endl;
+        return 0;
+}
+
