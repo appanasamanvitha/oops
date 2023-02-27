@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+class num{
+        public:
+        int n1,n2;
+        void read(){
+                cout<<"Enter n1: ";
+                cin>>n1;
+                cout<<"Enter n2: ";
+                cin>>n2;
+        }
+};
+class add:virtual public num{
+        public:
+        int s;
+        public:
+        void sum(){
+                s = n1 + n2;
+        }
+};
+class sub:public virtual num{
+	public:
+		int m;
+		void mi(){
+			m = n1 -  n2;
+		}
+};
+class sim:public add,public sub{
+	public:
+		int p;
+		void pro(){
+			p = m * s;
+		}
+		void print(){
+			cout<<"\nsum : "<<s<<"\nsub: "<<m<<"\nproduct of sum and sub : "<<p<<endl;
+		}
+};
+int main(){
+	sim h;
+	h.read();
+	h.sum();
+	h.mi();
+	h.pro();
+	h.print();
+	return 0;
+}
