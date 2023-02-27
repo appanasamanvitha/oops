@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class shapes{
+	public:
+		int l,b;
+		void read(){
+			cout<<"Enter length and breadth : "<<endl;
+			cin>>l>>b;
+		}
+};
+class rect:public shapes{
+	public:
+		int ar;
+		void calc(){
+			ar = l * b;
+		}
+		void pr(){
+			cout<<"length : "<<l<<"\nbreadth : "<<b<<endl;
+			cout<<"area of rectangle : "<<ar<<endl;
+		}
+};
+class tri:public shapes{
+	public:
+		int ta;
+		void cal(){
+			ta = l *b;
+		}
+		void pt(){
+			cout<<"\nlength : "<<l<<"\nbreadth : "<<b<<"\narea of traiangle : "<<ta<<endl;
+		}
+};
+int main(){
+	tri t;
+	rect r;
+	r.read();
+	r.calc();
+	r.pr();
+	t.read();
+	t.cal();
+	
+	t.pt();
+	return 0;
+}
